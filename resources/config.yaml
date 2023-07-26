@@ -1,0 +1,13 @@
+config:
+  webhooks:
+    - webhook_id: finance
+      type: GITLAB
+      conf:
+        gitlab:
+          host: http://192.168.10.1:8080/
+          private_token: xxxxxxx
+      notify:
+        ding_talk:
+          access_token: "e887b22ce236f2e0xxxxx799980fd1499ee271xxxxx83be8d721550c8"
+          sign_key: "SEC082117cd86xxxxxx1b301c834a16edxxxx602aa761410ba2d14c05eb217"
+
