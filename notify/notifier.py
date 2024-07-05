@@ -11,20 +11,18 @@ class Notifier(ABC):
     @abstractmethod
     def process(self, message: NotifyMessage):
         """
-        Process the notification message and return the actual request message object.
-
-        :param message: Notification message
-        :return: Request message object
+        处理通知消息并返回实际的请求消息对象。.
+        :param message: 通知消息
+        :return: 请求消息对象
         """
         pass
 
     @abstractmethod
     def notify(self, webhook: Webhook, json_data: dict):
         """
-        Notify the message.
-
-        :param webhook: Webhook information
-        :param json_data: Request message object
-        :return: Result of the notification
+        通知消息。
+        :param webhook: Webhook信息
+        :param json_data: 请求消息对象
+        :return:通知结果
         """
         pass

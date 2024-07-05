@@ -20,7 +20,6 @@ class GitlabWebhookHandler(WebhookHandler):
         event_handlers = gitlab_event_factory.get_event_handlers(gitlab_event, webhook)
         resp = []
         for handler in event_handlers:
-            # What event is the process
             notify_event = handlers.get(handler)
             if notify_event is not None and notify_event.should_notify(webhook, json_data):
                 # 生成通知消息
